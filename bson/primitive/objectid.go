@@ -84,11 +84,11 @@ func (id *ObjectID) Marshal() ([]byte, error) {
 }
 
 func (id *ObjectID) Unmarshal(data []byte) error {
-	objetcID, err := ObjectIDFromHex(hex.EncodeToString(data))
+	objectID, err := ObjectIDFromHex(hex.EncodeToString(data))
 	if err != nil {
 		return err
 	}
-	id = &objetcID
+	id = &objectID
 	return nil
 }
 
