@@ -9,8 +9,8 @@ package bson
 import (
 	"testing"
 
-	"go.mongodb.org/mongo-driver/bson/bsoncodec"
-	"go.mongodb.org/mongo-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsoncodec"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
 )
 
 type inputArgs struct {

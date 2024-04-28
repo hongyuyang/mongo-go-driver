@@ -17,16 +17,16 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/event"
-	"go.mongodb.org/mongo-driver/internal/assert"
-	"go.mongodb.org/mongo-driver/internal/integtest"
-	"go.mongodb.org/mongo-driver/mongo/description"
-	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/mongo/readpref"
-	"go.mongodb.org/mongo-driver/mongo/writeconcern"
-	"go.mongodb.org/mongo-driver/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/topology"
+	"github.com/hongyuyang/mongo-go-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/event"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/internal/integtest"
+	"github.com/hongyuyang/mongo-go-driver/mongo/description"
+	"github.com/hongyuyang/mongo-go-driver/mongo/options"
+	"github.com/hongyuyang/mongo-go-driver/mongo/readpref"
+	"github.com/hongyuyang/mongo-go-driver/mongo/writeconcern"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver/topology"
 )
 
 var (

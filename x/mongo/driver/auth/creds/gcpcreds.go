@@ -14,7 +14,7 @@ import (
 	"net/http"
 	"os"
 
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
+	"github.com/hongyuyang/mongo-go-driver/x/bsonx/bsoncore"
 )
 
 // GCPCredentialProvider provides GCP credentials.

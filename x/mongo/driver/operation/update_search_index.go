@@ -12,11 +12,11 @@ import (
 	"fmt"
 	"time"
 
-	"go.mongodb.org/mongo-driver/event"
-	"go.mongodb.org/mongo-driver/mongo/description"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/session"
+	"github.com/hongyuyang/mongo-go-driver/event"
+	"github.com/hongyuyang/mongo-go-driver/mongo/description"
+	"github.com/hongyuyang/mongo-go-driver/x/bsonx/bsoncore"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver/session"
 )
 
 // UpdateSearchIndex performs a updateSearchIndex operation.

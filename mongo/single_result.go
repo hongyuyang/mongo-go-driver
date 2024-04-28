@@ -11,9 +11,9 @@ import (
 	"errors"
 	"fmt"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/bsoncodec"
-	"go.mongodb.org/mongo-driver/mongo/options"
+	"github.com/hongyuyang/mongo-go-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsoncodec"
+	"github.com/hongyuyang/mongo-go-driver/mongo/options"
 )
 
 // ErrNoDocuments is returned by SingleResult methods when the operation that created the SingleResult did not return

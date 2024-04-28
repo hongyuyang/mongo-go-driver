@@ -11,9 +11,9 @@ import (
 	"fmt"
 	"io"
 
-	"go.mongodb.org/mongo-driver/bson/bsontype"
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsontype"
+	"github.com/hongyuyang/mongo-go-driver/bson/primitive"
+	"github.com/hongyuyang/mongo-go-driver/x/bsonx/bsoncore"
 )
 
 // Copier is a type that allows copying between ValueReaders, ValueWriters, and
@@ -225,7 +225,7 @@ func (c Copier) AppendArrayBytes(dst []byte, src ValueReader) ([]byte, error) {
 
 // CopyValueFromBytes will write the value represtend by t and src to dst.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.UnmarshalValue] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.UnmarshalValue] instead.
 func (c Copier) CopyValueFromBytes(dst ValueWriter, t bsontype.Type, src []byte) error {
 	if wvb, ok := dst.(BytesWriter); ok {
 		return wvb.WriteValueBytes(t, src)
@@ -243,7 +243,7 @@ func (c Copier) CopyValueFromBytes(dst ValueWriter, t bsontype.Type, src []byte)
 // CopyValueToBytes copies a value from src and returns it as a bsontype.Type and a
 // []byte.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.MarshalValue] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.MarshalValue] instead.
 func (c Copier) CopyValueToBytes(src ValueReader) (bsontype.Type, []byte, error) {
 	return c.AppendValueBytes(nil, src)
 }

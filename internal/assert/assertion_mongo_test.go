@@ -9,7 +9,7 @@ package assert
 import (
 	"testing"
 
-	"go.mongodb.org/mongo-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/bson"
 )
 
 func TestDifferentAddressRanges(t *testing.T) {

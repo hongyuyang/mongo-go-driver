@@ -10,10 +10,10 @@ import (
 	"context"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/internal/assert"
-	"go.mongodb.org/mongo-driver/mongo/description"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/drivertest"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/mongo/description"
+	"github.com/hongyuyang/mongo-go-driver/x/bsonx/bsoncore"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver/drivertest"
 )
 
 const (

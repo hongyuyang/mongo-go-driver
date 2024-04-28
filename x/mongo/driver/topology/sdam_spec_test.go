@@ -16,16 +16,16 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/event"
-	"go.mongodb.org/mongo-driver/internal/assert"
-	"go.mongodb.org/mongo-driver/internal/spectest"
-	"go.mongodb.org/mongo-driver/mongo/address"
-	"go.mongodb.org/mongo-driver/mongo/description"
-	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/x/mongo/driver"
+	"github.com/hongyuyang/mongo-go-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/bson/primitive"
+	"github.com/hongyuyang/mongo-go-driver/event"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/internal/spectest"
+	"github.com/hongyuyang/mongo-go-driver/mongo/address"
+	"github.com/hongyuyang/mongo-go-driver/mongo/description"
+	"github.com/hongyuyang/mongo-go-driver/mongo/options"
+	"github.com/hongyuyang/mongo-go-driver/x/bsonx/bsoncore"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver"
 )
 
 type response struct {

@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
 )
 
 func TestBackgroundContext(t *testing.T) {

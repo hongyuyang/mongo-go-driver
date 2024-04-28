@@ -10,7 +10,7 @@ import (
 	"errors"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
 )
 
 func TestGetRegion(t *testing.T) {

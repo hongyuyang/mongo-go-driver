@@ -9,9 +9,9 @@ package driver
 import (
 	"testing"
 
-	"go.mongodb.org/mongo-driver/internal/assert"
-	"go.mongodb.org/mongo-driver/internal/handshake"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/internal/handshake"
+	"github.com/hongyuyang/mongo-go-driver/x/bsonx/bsoncore"
 )
 
 func TestCommandMonitoring(t *testing.T) {

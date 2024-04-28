@@ -8,16 +8,16 @@
 //
 // For more information about MongoDB write concerns, see
 // https://www.mongodb.com/docs/manual/reference/write-concern/
-package writeconcern // import "go.mongodb.org/mongo-driver/mongo/writeconcern"
+package writeconcern // import "github.com/hongyuyang/mongo-go-driver/mongo/writeconcern"
 
 import (
 	"errors"
 	"fmt"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/bsontype"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
+	"github.com/hongyuyang/mongo-go-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsontype"
+	"github.com/hongyuyang/mongo-go-driver/x/bsonx/bsoncore"
 )
 
 const majority = "majority"

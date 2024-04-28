@@ -9,8 +9,8 @@ package bsoncodec
 import (
 	"reflect"
 
-	"go.mongodb.org/mongo-driver/bson/bsonrw"
-	"go.mongodb.org/mongo-driver/bson/bsontype"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsonrw"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsontype"
 )
 
 var _ ValueEncoder = &PointerCodec{}
@@ -20,7 +20,7 @@ var _ ValueDecoder = &PointerCodec{}
 //
 // Deprecated: PointerCodec will not be directly accessible in Go Driver 2.0. To
 // override the default pointer encode and decode behavior, create a new registry
-// with [go.mongodb.org/mongo-driver/bson.NewRegistry] and register a new
+// with [github.com/hongyuyang/mongo-go-driver/bson.NewRegistry] and register a new
 // encoder and decoder for pointers.
 //
 // For example,

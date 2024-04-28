@@ -10,7 +10,7 @@ import (
 	"context"
 	"sync"
 
-	"go.mongodb.org/mongo-driver/internal/logger"
+	"github.com/hongyuyang/mongo-go-driver/internal/logger"
 )
 
 // orderedLogMessage is a logMessage with an "order" field representing the

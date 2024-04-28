@@ -19,11 +19,11 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/event"
-	"go.mongodb.org/mongo-driver/internal/require"
-	"go.mongodb.org/mongo-driver/internal/spectest"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/operation"
+	"github.com/hongyuyang/mongo-go-driver/bson/primitive"
+	"github.com/hongyuyang/mongo-go-driver/event"
+	"github.com/hongyuyang/mongo-go-driver/internal/require"
+	"github.com/hongyuyang/mongo-go-driver/internal/spectest"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver/operation"
 )
 
 // skippedTestDescriptions is a collection of test descriptions that the test runner will skip. The

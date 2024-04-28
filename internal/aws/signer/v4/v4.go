@@ -23,8 +23,8 @@ import (
 	"strings"
 	"time"
 
-	"go.mongodb.org/mongo-driver/internal/aws"
-	"go.mongodb.org/mongo-driver/internal/aws/credentials"
+	"github.com/hongyuyang/mongo-go-driver/internal/aws"
+	"github.com/hongyuyang/mongo-go-driver/internal/aws/credentials"
 )
 
 const (

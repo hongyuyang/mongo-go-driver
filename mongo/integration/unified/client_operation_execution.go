@@ -11,11 +11,11 @@ import (
 	"fmt"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"go.mongodb.org/mongo-driver/internal/bsonutil"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
+	"github.com/hongyuyang/mongo-go-driver/bson/primitive"
+	"github.com/hongyuyang/mongo-go-driver/internal/bsonutil"
+	"github.com/hongyuyang/mongo-go-driver/mongo"
+	"github.com/hongyuyang/mongo-go-driver/mongo/options"
+	"github.com/hongyuyang/mongo-go-driver/x/bsonx/bsoncore"
 )
 
 // This file contains helpers to execute client operations.

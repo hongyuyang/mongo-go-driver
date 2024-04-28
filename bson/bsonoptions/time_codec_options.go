@@ -24,7 +24,7 @@ func TimeCodec() *TimeCodecOptions {
 
 // SetUseLocalTimeZone specifies if we should decode into the local time zone. Defaults to false.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Decoder.UseLocalTimeZone] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Decoder.UseLocalTimeZone] instead.
 func (t *TimeCodecOptions) SetUseLocalTimeZone(b bool) *TimeCodecOptions {
 	t.UseLocalTimeZone = &b
 	return t

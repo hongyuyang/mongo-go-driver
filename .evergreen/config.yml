@@ -132,7 +132,7 @@ functions:
     # Load the expansion file to make an evergreen variable with the current unique version
     - command: expansions.update
       params:
-        file: src/go.mongodb.org/mongo-driver/expansion.yml
+        file: src/github.com/hongyuyang/mongo-go-driver/expansion.yml
 
   prepare-resources:
     - command: shell.exec
@@ -173,13 +173,13 @@ functions:
     # Load the expansion file to make an evergreen variable with the current unique version
     - command: expansions.update
       params:
-        file: src/go.mongodb.org/mongo-driver/expansion.yml
+        file: src/github.com/hongyuyang/mongo-go-driver/expansion.yml
 
   handle-test-artifacts:
     - command: gotest.parse_files
       params:
         files:
-          - "src/go.mongodb.org/mongo-driver/*.suite"
+          - "src/github.com/hongyuyang/mongo-go-driver/*.suite"
     - command: shell.exec
       params:
         shell: "bash"
@@ -218,7 +218,7 @@ functions:
       params:
         aws_key: ${aws_key}
         aws_secret: ${aws_secret}
-        local_file: src/go.mongodb.org/mongo-driver/test_suite.tgz
+        local_file: src/github.com/hongyuyang/mongo-go-driver/test_suite.tgz
         optional: true
         remote_file: ${UPLOAD_BUCKET}/${build_variant}/${revision}/${version_id}/${build_id}/logs/${task_id}-${execution}-test_suite.tgz
         bucket: mciuploads
@@ -410,7 +410,7 @@ functions:
   send-perf-data:
     - command: perf.send
       params:
-        file: src/go.mongodb.org/mongo-driver/perf.json
+        file: src/github.com/hongyuyang/mongo-go-driver/perf.json
 
   run-enterprise-auth-tests:
     - command: ec2.assume_role
@@ -2287,7 +2287,7 @@ task_groups:
             - ${DRIVERS_TOOLS}/.evergreen/atlas/setup-atlas-cluster.sh
       - command: expansions.update
         params:
-          file: src/go.mongodb.org/mongo-driver/atlas-expansion.yml
+          file: src/github.com/hongyuyang/mongo-go-driver/atlas-expansion.yml
       - command: shell.exec
         params:
           working_dir: src/go.mongodb.org/mongo-driver
@@ -2296,7 +2296,7 @@ task_groups:
             echo "TEST_INDEX_URI: ${MONGODB_URI}" > atlas-expansion.yml
       - command: expansions.update
         params:
-          file: src/go.mongodb.org/mongo-driver/atlas-expansion.yml
+          file: src/github.com/hongyuyang/mongo-go-driver/atlas-expansion.yml
     teardown_group:
       - command: subprocess.exec
         params:

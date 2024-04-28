@@ -14,13 +14,13 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/event"
-	"go.mongodb.org/mongo-driver/internal/assert"
-	"go.mongodb.org/mongo-driver/internal/eventtest"
-	"go.mongodb.org/mongo-driver/internal/require"
-	"go.mongodb.org/mongo-driver/mongo/address"
-	"go.mongodb.org/mongo-driver/x/mongo/driver"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/operation"
+	"github.com/hongyuyang/mongo-go-driver/event"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/internal/eventtest"
+	"github.com/hongyuyang/mongo-go-driver/internal/require"
+	"github.com/hongyuyang/mongo-go-driver/mongo/address"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver/operation"
 )
 
 func TestPool(t *testing.T) {

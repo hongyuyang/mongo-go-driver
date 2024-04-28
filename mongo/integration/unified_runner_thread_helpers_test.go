@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"sync"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/internal/assert"
-	"go.mongodb.org/mongo-driver/mongo/integration/mtest"
+	"github.com/hongyuyang/mongo-go-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/mongo/integration/mtest"
 )
 
 // Helper functions for the operations in the unified spec test runner that require creating and synchronizing

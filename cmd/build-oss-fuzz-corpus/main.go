@@ -19,7 +19,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"go.mongodb.org/mongo-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/bson"
 )
 
 const dataDir = "testdata/bson-corpus/"

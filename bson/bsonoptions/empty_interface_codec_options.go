@@ -24,7 +24,7 @@ func EmptyInterfaceCodec() *EmptyInterfaceCodecOptions {
 
 // SetDecodeBinaryAsSlice specifies if Old and Generic type binarys should default to []slice instead of primitive.Binary. Defaults to false.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Decoder.BinaryAsSlice] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Decoder.BinaryAsSlice] instead.
 func (e *EmptyInterfaceCodecOptions) SetDecodeBinaryAsSlice(b bool) *EmptyInterfaceCodecOptions {
 	e.DecodeBinaryAsSlice = &b
 	return e

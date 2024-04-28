@@ -9,7 +9,7 @@ package options
 import (
 	"testing"
 
-	"go.mongodb.org/mongo-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
 )
 
 func TestMergeChangeStreamOptions(t *testing.T) {

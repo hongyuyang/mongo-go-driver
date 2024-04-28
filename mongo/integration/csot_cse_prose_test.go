@@ -13,13 +13,13 @@ import (
 	"context"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/event"
-	"go.mongodb.org/mongo-driver/internal/assert"
-	"go.mongodb.org/mongo-driver/internal/integtest"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/integration/mtest"
-	"go.mongodb.org/mongo-driver/mongo/options"
+	"github.com/hongyuyang/mongo-go-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/event"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/internal/integtest"
+	"github.com/hongyuyang/mongo-go-driver/mongo"
+	"github.com/hongyuyang/mongo-go-driver/mongo/integration/mtest"
+	"github.com/hongyuyang/mongo-go-driver/mongo/options"
 )
 
 // CSOT prose tests that require the 'cse' Go build tag.

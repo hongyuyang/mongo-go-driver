@@ -24,7 +24,7 @@ func ByteSliceCodec() *ByteSliceCodecOptions {
 
 // SetEncodeNilAsEmpty specifies  if a nil byte slice should encode as an empty binary instead of null. Defaults to false.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.NilByteSliceAsEmpty] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.NilByteSliceAsEmpty] instead.
 func (bs *ByteSliceCodecOptions) SetEncodeNilAsEmpty(b bool) *ByteSliceCodecOptions {
 	bs.EncodeNilAsEmpty = &b
 	return bs

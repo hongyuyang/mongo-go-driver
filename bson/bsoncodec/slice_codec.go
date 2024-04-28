@@ -11,10 +11,10 @@ import (
 	"fmt"
 	"reflect"
 
-	"go.mongodb.org/mongo-driver/bson/bsonoptions"
-	"go.mongodb.org/mongo-driver/bson/bsonrw"
-	"go.mongodb.org/mongo-driver/bson/bsontype"
-	"go.mongodb.org/mongo-driver/bson/primitive"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsonoptions"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsonrw"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsontype"
+	"github.com/hongyuyang/mongo-go-driver/bson/primitive"
 )
 
 var defaultSliceCodec = NewSliceCodec()
@@ -23,10 +23,10 @@ var defaultSliceCodec = NewSliceCodec()
 //
 // Deprecated: SliceCodec will not be directly configurable in Go Driver 2.0. To
 // configure the slice encode and decode behavior, use the configuration methods
-// on a [go.mongodb.org/mongo-driver/bson.Encoder] or
-// [go.mongodb.org/mongo-driver/bson.Decoder]. To configure the slice encode and
+// on a [github.com/hongyuyang/mongo-go-driver/bson.Encoder] or
+// [github.com/hongyuyang/mongo-go-driver/bson.Decoder]. To configure the slice encode and
 // decode behavior for a mongo.Client, use
-// [go.mongodb.org/mongo-driver/mongo/options.ClientOptions.SetBSONOptions].
+// [github.com/hongyuyang/mongo-go-driver/mongo/options.ClientOptions.SetBSONOptions].
 //
 // For example, to configure a mongo.Client to marshal nil Go slices as empty
 // BSON arrays, use:

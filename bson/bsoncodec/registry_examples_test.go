@@ -11,10 +11,10 @@ import (
 	"math"
 	"reflect"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/bsoncodec"
-	"go.mongodb.org/mongo-driver/bson/bsonrw"
-	"go.mongodb.org/mongo-driver/bson/bsontype"
+	"github.com/hongyuyang/mongo-go-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsoncodec"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsonrw"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsontype"
 )
 
 func ExampleRegistry_customEncoder() {

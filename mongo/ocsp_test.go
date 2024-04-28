@@ -14,10 +14,10 @@ import (
 	"testing"
 	"time"
 
-	"go.mongodb.org/mongo-driver/internal/assert"
-	"go.mongodb.org/mongo-driver/internal/integtest"
-	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/mongo/readpref"
+	"github.com/hongyuyang/mongo-go-driver/internal/assert"
+	"github.com/hongyuyang/mongo-go-driver/internal/integtest"
+	"github.com/hongyuyang/mongo-go-driver/mongo/options"
+	"github.com/hongyuyang/mongo-go-driver/mongo/readpref"
 )
 
 func TestOCSP(t *testing.T) {

@@ -22,11 +22,11 @@ import (
 	"net/http"
 	"unsafe"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/internal/httputil"
-	"go.mongodb.org/mongo-driver/x/bsonx/bsoncore"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/auth/creds"
-	"go.mongodb.org/mongo-driver/x/mongo/driver/mongocrypt/options"
+	"github.com/hongyuyang/mongo-go-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/internal/httputil"
+	"github.com/hongyuyang/mongo-go-driver/x/bsonx/bsoncore"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver/auth/creds"
+	"github.com/hongyuyang/mongo-go-driver/x/mongo/driver/mongocrypt/options"
 )
 
 type kmsProvider interface {

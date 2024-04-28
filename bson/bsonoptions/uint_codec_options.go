@@ -24,7 +24,7 @@ func UIntCodec() *UIntCodecOptions {
 
 // SetEncodeToMinSize specifies if all uints except uint64 should be decoded to minimum size bsontype. Defaults to false.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.IntMinSize] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.IntMinSize] instead.
 func (u *UIntCodecOptions) SetEncodeToMinSize(b bool) *UIntCodecOptions {
 	u.EncodeToMinSize = &b
 	return u

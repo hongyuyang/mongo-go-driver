@@ -31,7 +31,7 @@ func MapCodec() *MapCodecOptions {
 
 // SetDecodeZerosMap specifies if the map should be zeroed before decoding into it. Defaults to false.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Decoder.ZeroMaps] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Decoder.ZeroMaps] instead.
 func (t *MapCodecOptions) SetDecodeZerosMap(b bool) *MapCodecOptions {
 	t.DecodeZerosMap = &b
 	return t
@@ -39,7 +39,7 @@ func (t *MapCodecOptions) SetDecodeZerosMap(b bool) *MapCodecOptions {
 
 // SetEncodeNilAsEmpty specifies if a nil map should encode as an empty document instead of null. Defaults to false.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.NilMapAsEmpty] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.NilMapAsEmpty] instead.
 func (t *MapCodecOptions) SetEncodeNilAsEmpty(b bool) *MapCodecOptions {
 	t.EncodeNilAsEmpty = &b
 	return t
@@ -51,7 +51,7 @@ func (t *MapCodecOptions) SetEncodeNilAsEmpty(b bool) *MapCodecOptions {
 // fmt.Sprint() and the encoding key type must be a string, an integer type, or a float. If true, the use of Stringer
 // will override TextMarshaler/TextUnmarshaler. Defaults to false.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.StringifyMapKeysWithFmt] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.StringifyMapKeysWithFmt] instead.
 func (t *MapCodecOptions) SetEncodeKeysWithStringer(b bool) *MapCodecOptions {
 	t.EncodeKeysWithStringer = &b
 	return t

@@ -9,7 +9,7 @@ package credproviders
 import (
 	"errors"
 
-	"go.mongodb.org/mongo-driver/internal/aws/credentials"
+	"github.com/hongyuyang/mongo-go-driver/internal/aws/credentials"
 )
 
 // staticProviderName provides a name of Static provider

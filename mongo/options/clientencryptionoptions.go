@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"go.mongodb.org/mongo-driver/internal/httputil"
+	"github.com/hongyuyang/mongo-go-driver/internal/httputil"
 )
 
 // ClientEncryptionOptions represents all possible options used to configure a ClientEncryption instance.

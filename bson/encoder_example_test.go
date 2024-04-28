@@ -12,8 +12,8 @@ import (
 	"fmt"
 	"io"
 
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/bson/bsonrw"
+	"github.com/hongyuyang/mongo-go-driver/bson"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsonrw"
 )
 
 func ExampleEncoder() {

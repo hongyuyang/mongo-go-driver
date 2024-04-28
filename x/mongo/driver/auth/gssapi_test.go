@@ -13,8 +13,8 @@ import (
 	"context"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/mongo/address"
-	"go.mongodb.org/mongo-driver/mongo/description"
+	"github.com/hongyuyang/mongo-go-driver/mongo/address"
+	"github.com/hongyuyang/mongo-go-driver/mongo/description"
 )
 
 func TestGSSAPIAuthenticator(t *testing.T) {

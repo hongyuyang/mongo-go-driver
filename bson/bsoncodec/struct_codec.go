@@ -15,9 +15,9 @@ import (
 	"sync"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson/bsonoptions"
-	"go.mongodb.org/mongo-driver/bson/bsonrw"
-	"go.mongodb.org/mongo-driver/bson/bsontype"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsonoptions"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsonrw"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsontype"
 )
 
 // DecodeError represents an error that occurs when unmarshalling BSON bytes into a native Go type.
@@ -62,10 +62,10 @@ type Zeroer interface {
 //
 // Deprecated: StructCodec will not be directly configurable in Go Driver 2.0.
 // To configure the struct encode and decode behavior, use the configuration
-// methods on a [go.mongodb.org/mongo-driver/bson.Encoder] or
-// [go.mongodb.org/mongo-driver/bson.Decoder]. To configure the struct encode
+// methods on a [github.com/hongyuyang/mongo-go-driver/bson.Encoder] or
+// [github.com/hongyuyang/mongo-go-driver/bson.Decoder]. To configure the struct encode
 // and decode behavior for a mongo.Client, use
-// [go.mongodb.org/mongo-driver/mongo/options.ClientOptions.SetBSONOptions].
+// [github.com/hongyuyang/mongo-go-driver/mongo/options.ClientOptions.SetBSONOptions].
 //
 // For example, to configure a mongo.Client to omit zero-value structs when
 // using the "omitempty" struct tag, use:

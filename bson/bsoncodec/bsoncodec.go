@@ -4,16 +4,16 @@
 // not use this file except in compliance with the License. You may obtain
 // a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-package bsoncodec // import "go.mongodb.org/mongo-driver/bson/bsoncodec"
+package bsoncodec // import "github.com/hongyuyang/mongo-go-driver/bson/bsoncodec"
 
 import (
 	"fmt"
 	"reflect"
 	"strings"
 
-	"go.mongodb.org/mongo-driver/bson/bsonrw"
-	"go.mongodb.org/mongo-driver/bson/bsontype"
-	"go.mongodb.org/mongo-driver/bson/primitive"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsonrw"
+	"github.com/hongyuyang/mongo-go-driver/bson/bsontype"
+	"github.com/hongyuyang/mongo-go-driver/bson/primitive"
 )
 
 var (
@@ -24,7 +24,7 @@ var (
 // into a BSON document represented as bytes. The bytes returned must be a valid
 // BSON document if the error is nil.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Marshaler] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Marshaler] instead.
 type Marshaler interface {
 	MarshalBSON() ([]byte, error)
 }
@@ -34,7 +34,7 @@ type Marshaler interface {
 // the bytes returned. The bytes and byte type together must be valid if the
 // error is nil.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.ValueMarshaler] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.ValueMarshaler] instead.
 type ValueMarshaler interface {
 	MarshalBSONValue() (bsontype.Type, []byte, error)
 }
@@ -44,7 +44,7 @@ type ValueMarshaler interface {
 // valid. UnmarshalBSON must copy the BSON bytes if it wishes to retain the data
 // after returning.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Unmarshaler] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Unmarshaler] instead.
 type Unmarshaler interface {
 	UnmarshalBSON([]byte) error
 }
@@ -54,7 +54,7 @@ type Unmarshaler interface {
 // assumed to be valid. UnmarshalBSONValue must copy the BSON value bytes if it
 // wishes to retain the data after returning.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.ValueUnmarshaler] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.ValueUnmarshaler] instead.
 type ValueUnmarshaler interface {
 	UnmarshalBSONValue(bsontype.Type, []byte) error
 }
@@ -139,7 +139,7 @@ type EncodeContext struct {
 // ErrorOnInlineDuplicates causes the Encoder to return an error if there is a duplicate field in
 // the marshaled BSON when the "inline" struct tag option is set.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.ErrorOnInlineDuplicates] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.ErrorOnInlineDuplicates] instead.
 func (ec *EncodeContext) ErrorOnInlineDuplicates() {
 	ec.errorOnInlineDuplicates = true
 }
@@ -147,7 +147,7 @@ func (ec *EncodeContext) ErrorOnInlineDuplicates() {
 // StringifyMapKeysWithFmt causes the Encoder to convert Go map keys to BSON document field name
 // strings using fmt.Sprintf() instead of the default string conversion logic.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.StringifyMapKeysWithFmt] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.StringifyMapKeysWithFmt] instead.
 func (ec *EncodeContext) StringifyMapKeysWithFmt() {
 	ec.stringifyMapKeysWithFmt = true
 }
@@ -155,7 +155,7 @@ func (ec *EncodeContext) StringifyMapKeysWithFmt() {
 // NilMapAsEmpty causes the Encoder to marshal nil Go maps as empty BSON documents instead of BSON
 // null.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.NilMapAsEmpty] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.NilMapAsEmpty] instead.
 func (ec *EncodeContext) NilMapAsEmpty() {
 	ec.nilMapAsEmpty = true
 }
@@ -163,7 +163,7 @@ func (ec *EncodeContext) NilMapAsEmpty() {
 // NilSliceAsEmpty causes the Encoder to marshal nil Go slices as empty BSON arrays instead of BSON
 // null.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.NilSliceAsEmpty] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.NilSliceAsEmpty] instead.
 func (ec *EncodeContext) NilSliceAsEmpty() {
 	ec.nilSliceAsEmpty = true
 }
@@ -171,7 +171,7 @@ func (ec *EncodeContext) NilSliceAsEmpty() {
 // NilByteSliceAsEmpty causes the Encoder to marshal nil Go byte slices as empty BSON binary values
 // instead of BSON null.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.NilByteSliceAsEmpty] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.NilByteSliceAsEmpty] instead.
 func (ec *EncodeContext) NilByteSliceAsEmpty() {
 	ec.nilByteSliceAsEmpty = true
 }
@@ -182,7 +182,7 @@ func (ec *EncodeContext) NilByteSliceAsEmpty() {
 // Note that the Encoder only examines exported struct fields when determining if a struct is the
 // zero value. It considers pointers to a zero struct value (e.g. &MyStruct{}) not empty.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.OmitZeroStruct] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.OmitZeroStruct] instead.
 func (ec *EncodeContext) OmitZeroStruct() {
 	ec.omitZeroStruct = true
 }
@@ -190,7 +190,7 @@ func (ec *EncodeContext) OmitZeroStruct() {
 // UseJSONStructTags causes the Encoder to fall back to using the "json" struct tag if a "bson"
 // struct tag is not specified.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Encoder.UseJSONStructTags] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Encoder.UseJSONStructTags] instead.
 func (ec *EncodeContext) UseJSONStructTags() {
 	ec.useJSONStructTags = true
 }
@@ -232,7 +232,7 @@ type DecodeContext struct {
 // BinaryAsSlice causes the Decoder to unmarshal BSON binary field values that are the "Generic" or
 // "Old" BSON binary subtype as a Go byte slice instead of a primitive.Binary.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Decoder.BinaryAsSlice] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Decoder.BinaryAsSlice] instead.
 func (dc *DecodeContext) BinaryAsSlice() {
 	dc.binaryAsSlice = true
 }
@@ -240,7 +240,7 @@ func (dc *DecodeContext) BinaryAsSlice() {
 // UseJSONStructTags causes the Decoder to fall back to using the "json" struct tag if a "bson"
 // struct tag is not specified.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Decoder.UseJSONStructTags] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Decoder.UseJSONStructTags] instead.
 func (dc *DecodeContext) UseJSONStructTags() {
 	dc.useJSONStructTags = true
 }
@@ -248,7 +248,7 @@ func (dc *DecodeContext) UseJSONStructTags() {
 // UseLocalTimeZone causes the Decoder to unmarshal time.Time values in the local timezone instead
 // of the UTC timezone.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Decoder.UseLocalTimeZone] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Decoder.UseLocalTimeZone] instead.
 func (dc *DecodeContext) UseLocalTimeZone() {
 	dc.useLocalTimeZone = true
 }
@@ -256,7 +256,7 @@ func (dc *DecodeContext) UseLocalTimeZone() {
 // ZeroMaps causes the Decoder to delete any existing values from Go maps in the destination value
 // passed to Decode before unmarshaling BSON documents into them.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Decoder.ZeroMaps] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Decoder.ZeroMaps] instead.
 func (dc *DecodeContext) ZeroMaps() {
 	dc.zeroMaps = true
 }
@@ -264,7 +264,7 @@ func (dc *DecodeContext) ZeroMaps() {
 // ZeroStructs causes the Decoder to delete any existing values from Go structs in the destination
 // value passed to Decode before unmarshaling BSON documents into them.
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Decoder.ZeroStructs] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Decoder.ZeroStructs] instead.
 func (dc *DecodeContext) ZeroStructs() {
 	dc.zeroStructs = true
 }
@@ -272,7 +272,7 @@ func (dc *DecodeContext) ZeroStructs() {
 // DefaultDocumentM causes the Decoder to always unmarshal documents into the primitive.M type. This
 // behavior is restricted to data typed as "interface{}" or "map[string]interface{}".
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Decoder.DefaultDocumentM] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Decoder.DefaultDocumentM] instead.
 func (dc *DecodeContext) DefaultDocumentM() {
 	dc.defaultDocumentType = reflect.TypeOf(primitive.M{})
 }
@@ -280,7 +280,7 @@ func (dc *DecodeContext) DefaultDocumentM() {
 // DefaultDocumentD causes the Decoder to always unmarshal documents into the primitive.D type. This
 // behavior is restricted to data typed as "interface{}" or "map[string]interface{}".
 //
-// Deprecated: Use [go.mongodb.org/mongo-driver/bson.Decoder.DefaultDocumentD] instead.
+// Deprecated: Use [github.com/hongyuyang/mongo-go-driver/bson.Decoder.DefaultDocumentD] instead.
 func (dc *DecodeContext) DefaultDocumentD() {
 	dc.defaultDocumentType = reflect.TypeOf(primitive.D{})
 }

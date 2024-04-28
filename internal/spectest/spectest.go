@@ -11,7 +11,7 @@ import (
 	"path"
 	"testing"
 
-	"go.mongodb.org/mongo-driver/internal/require"
+	"github.com/hongyuyang/mongo-go-driver/internal/require"
 )
 
 // FindJSONFilesInDir finds the JSON files in a directory.
