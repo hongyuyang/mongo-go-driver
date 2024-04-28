@@ -79,6 +79,19 @@ func (id *ObjectID) Size() int {
 	return len(id)
 }
 
+func (id *ObjectID) Marshal() ([]byte, error) {
+	return []byte(id.Hex()), nil
+}
+
+func (id *ObjectID) Unmarshal(data []byte) error {
+	objetcID, err := ObjectIDFromHex(hex.EncodeToString(data))
+	if err != nil {
+		return err
+	}
+	id = &objetcID
+	return nil
+}
+
 // ObjectIDFromHex creates a new ObjectID from a hex string. It returns an error if the hex string is not a
 // valid ObjectID.
 func ObjectIDFromHex(s string) (ObjectID, error) {
