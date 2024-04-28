@@ -9,7 +9,7 @@ require (
 	github.com/sirupsen/logrus v1.9.0
 	// Note that the Go driver version is replaced with the local Go driver code
 	// by the replace directive above.
-	go.mongodb.org/mongo-driver v1.11.7
+	go.mongodb.org/mongo-driver v1.15.0
 )
 
 require (

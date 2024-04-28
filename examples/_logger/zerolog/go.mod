@@ -9,7 +9,7 @@ require (
 	github.com/rs/zerolog v1.28.0
 	// Note that the Go driver version is replaced with the local Go driver code
 	// by the replace directive above.
-	go.mongodb.org/mongo-driver v1.11.7
+	go.mongodb.org/mongo-driver v1.15.0
 )
 
 require (
